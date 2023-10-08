@@ -1,0 +1,124 @@
+
+
+
+task1;
+#include <iostream>
+using namespace std;
+int value1=10;
+int value2=20;
+int sum()
+{
+    value1=40;
+    return value1+ value2;
+}
+main()
+{
+    int x=value1;
+    value1=100;
+    x=20;
+    value2 = sum();
+    cout <<value1<<"     "<<value2;
+
+}
+task 2;
+
+
+
+#include<iostream>
+using namespace std;
+void vp(int length,int height,int width);
+int main()
+
+{  
+	float length,height,width;
+	cout<<"Enter the length of the pyramid (in meters): ";
+	cin>>length;
+	cout<<"Enter the width of the pyramid (in meters): ";
+	cin>>width;
+	cout<<"Enter the height of the pyramid (in meters): ";
+	cin>>height;
+	vp(length,height,width);	
+}
+void vp(int length,int height,int width)
+{
+	float volume;
+	volume = (length*height*width)/3;
+	string unit;
+	cout<<"Enter the desired output unit (millimeters,centimeters,kilometers): ";
+	cin>> unit;
+	if( unit=="milliimeters")
+	{ volume = volume*(10*10*10);}
+	if( unit=="centimeters")
+	{ volume = volume*(10*10);}
+	if( unit=="kilometers")
+	{ volume = volume/(10*10*10) ;}
+	cout<<"Enter the desired output unit: "<<volume<<" cubic "<< unit;
+ 	
+}
+
+
+task3;
+
+
+#include<iostream>
+using namespace std;
+void finalprice(char vtype,float price);
+int main()
+{
+	char vtype;
+	cout<<"Enter the vehicle type code (M, E, V, T): ";
+	cin>>vtype;
+	float price;
+	cout<<"Enter the price of the vehicle: $";
+	cin>>price;
+	finalprice(vtype,price);
+}
+void finalprice(char vtype,float price)
+	
+{	float fp;
+	if(vtype=='M')
+	{fp = price+price*0.06;}
+	if(vtype=='E')
+	{fp = price+price*0.08;}
+	if(vtype=='S')
+	{fp = price+price*0.1;}
+	if(vtype=='V')
+	{fp = price+price*0.12;}
+	if(vtype=='M')
+	{fp = price+price*0.15;}
+	cout<<"The final price of a vehicle of type "<<vtype<<" after adding tax is $"<< fp;
+}
+
+
+task4;
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int hours;
+	cout<<"Enter the hours needed: ";
+	cin>>hours;
+	int days;
+	cout<<"Enter the days that the firm has: ";
+	cin>>days;
+	int workers;
+	cout<<"Enter the number of all workers: ";
+	cin>>workers;
+	int totalhours;
+	totalhours = 9*days*workers;
+	int timerequired;
+	if(timerequired < hours)
+	{timerequired=hours - totalhours;
+	cout<<"Not enough time! "<<timerequired<< " hours needed. ";}
+	else 
+	{timerequired = totalhours - hours;
+	cout<<"Yes!"<<timerequired<<" hours left.";}
+}
+	
+	
+	
+	
+	
+	
